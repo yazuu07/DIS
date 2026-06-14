@@ -1,0 +1,41 @@
+/* css/style.css */
+/* Inter font import as fallback (already loaded via style tag, but this ensures CSS rule) */
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Fade transition setup */
+#page-content {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+
+#page-content.fade-out {
+  opacity: 0;
+}
+
+/* Logo and link reset */
+a.logo-container {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Active navigation indicator handled by inline classes, but dynamic update works via JS */
+.nav-link {
+  border-bottom: 2px solid transparent;
+}
+
+/* Mobile menu smoothness */
+#mobile-menu {
+  transition: max-height 0.3s ease, opacity 0.2s ease;
+}
+
+/* Form alert styling */
+#form-alert {
+  transition: opacity 0.3s;
+}
+
+/* Any custom logo adjustments */
+svg {
+  display: inline-block;
+}

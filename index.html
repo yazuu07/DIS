@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Digital Innovators Society • Home</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom CSS & Font Import -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Inter font import via CSS -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap');
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: '#0f3b5c',
+              accent: '#2c7da0',
+              light: '#eef4fc',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800 antialiased min-h-screen flex flex-col">
+
+  <!-- Header / Navigation -->
+  <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <!-- Logo (custom SVG, replaceable) -->
+        <a href="index.html" class="logo-container flex items-center gap-2 no-underline" data-link>
+          <img src="images/file_000000007c287206b0b4293a6706ca3f.webp" alt="Digital Innovators Society" width="40" height="40" class="transition-transform duration-300 hover:scale-105 rounded">
+          <span class="text-xl font-semibold text-brand-primary tracking-tight">Digital Innovators Society</span>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="index.html" class="nav-link text-brand-primary border-b-2 border-brand-accent pb-1" data-link>Home</a>
+          <a href="services.html" class="nav-link text-gray-700 hover:text-brand-accent transition pb-1" data-link>Services</a>
+          <a href="company.html" class="nav-link text-gray-700 hover:text-brand-accent transition pb-1" data-link>Company</a>
+          <a href="contact.html" class="nav-link text-gray-700 hover:text-brand-accent transition pb-1" data-link>Contact</a>
+        </nav>
+        
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-toggle" class="md:hidden text-brand-primary p-2 rounded-md hover:bg-brand-light transition" aria-label="Toggle menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path id="menu-icon-open" d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" />
+            <path id="menu-icon-close" class="hidden" d="M6 6l12 12M18 6L6 18" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Mobile menu (hidden by default) -->
+      <div id="mobile-menu" class="md:hidden hidden flex-col pb-4 space-y-2 transition-all duration-300">
+        <a href="index.html" class="mobile-nav-link block py-2 px-3 rounded-md bg-brand-light text-brand-primary font-semibold" data-link>Home</a>
+        <a href="services.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:bg-brand-light" data-link>Services</a>
+        <a href="company.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:bg-brand-light" data-link>Company</a>
+        <a href="contact.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:bg-brand-light" data-link>Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content with fade wrapper -->
+  <main id="page-content" class="flex-grow transition-opacity duration-300 opacity-100">
+    <!-- Home Page Content -->
+    <section class="relative bg-gradient-to-b from-white to-brand-light">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 class="text-4xl sm:text-5xl font-bold text-brand-primary leading-tight mb-6">
+              We are <span class="text-pink-800">Digital Innovators</span>
+            </h1>
+            <p class="text-lg text-gray-600 mb-8 max-w-xl">
+              A technology collective driven by curiosity and precision. We build future-ready digital solutions, guided by deep expertise and collaborative spirit.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="services.html" class="inline-block bg-brand-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-brand-accent transition shadow-md" data-link>Explore services</a>
+              <a href="company.html" class="inline-block border border-brand-primary text-brand-primary px-6 py-3 rounded-lg font-medium hover:bg-brand-light transition" data-link>Meet the team</a>
+            </div>
+          </div>
+          <div class="hidden lg:flex justify-center">
+            <!-- Abstract illustration representing team/innovation -->
+            <svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" class="drop-shadow-xl">
+              <rect x="50" y="80" width="120" height="140" rx="16" fill="#0f3b5c" opacity="0.9" />
+              <circle cx="110" cy="130" r="30" fill="#eef4fc" />
+              <rect x="190" y="120" width="120" height="100" rx="16" fill="#2c7da0" opacity="0.85" />
+              <circle cx="250" cy="160" r="25" fill="white" />
+              <rect x="140" y="200" width="100" height="80" rx="12" fill="#eef4fc" stroke="#0f3b5c" stroke-width="2" />
+              <path d="M190 240 L210 220 L230 240" stroke="#0f3b5c" stroke-width="2" fill="none" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-brand-primary">Our core team</h2>
+          <p class="mt-3 text-gray-600 max-w-2xl mx-auto">Diverse minds united by a passion for technology and meaningful progress.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-brand-light p-6 rounded-xl shadow-sm hover:shadow-md transition">
+            <div class="w-16 h-16 bg-brand-primary rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4">AJ</div>
+            <h3 class="text-xl font-semibold text-brand-primary">Lui Ysabel Teniedo</h3>
+            <p class="text-brand-accent text-sm font-medium">CFO & President</p>
+            <p class="text-gray-600 mt-2 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software including versions of Lorem Ipsum.</p>
+          </div>
+          <div class="bg-brand-light p-6 rounded-xl shadow-sm hover:shadow-md transition">
+            <div class="w-16 h-16 bg-brand-accent rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4">MR</div>
+            <h3 class="text-xl font-semibold text-brand-primary">Nimrod Palomar III</h3>
+            <p class="text-brand-accent text-sm font-medium">CFO & Secretary</p>
+            <p class="text-gray-600 mt-2 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software including versions of Lorem Ipsum.</p>
+          </div>
+          <div class="bg-brand-light p-6 rounded-xl shadow-sm hover:shadow-md transition">
+            <div class="w-16 h-16 bg-brand-primary rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4">SP</div>
+            <h3 class="text-xl font-semibold text-brand-primary">Christian Dela Cruz</h3>
+            <p class="text-brand-accent text-sm font-medium">Strategy Lead</p>
+            <p class="text-gray-600 mt-2 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software including versions of Lorem Ipsum.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-brand-primary text-gray-200 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-2">
+          <img src="images/file_000000007c287206b0b4293a6706ca3f.webp" alt="Digital Innovators Society" width="40" height="40" class="transition-transform duration-300 hover:scale-105 rounded">
+          <span class="text-white font-semibold">Digital Innovators Society</span>
+        </div>
+        <p class="text-sm text-gray-300">© 2026 Digital Innovators Society. Crafted with precision.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for transitions, mobile menu, active state -->
+  <script src="js/script.js"></script>
+</body>
+</html>
